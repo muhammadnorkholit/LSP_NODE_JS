@@ -1,0 +1,98 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>Data BDS</title>
+    <style>
+      * { margin: 0; padding: 0; } .table { width: 100%; border-collapse:
+      collapse; } .table th, .table td { padding: 8px; text-align: left; border:
+      1px solid #ddd; padding-block:17px ;} .table th { background-color:
+      #f2f2f2; } .table tr:nth-child(even) { background-color: #f9f9f9; } .table
+      tr:hover { background-color: #e2e2e2; } body { font-family: Arial,
+      Helvetica, sans-serif; } .info{ display: flex; gap: 10px; margin-bottom:
+      .7rem;}.info p{ width: 50px; }.info:nth-child(3){ margin-bottom: 1.8rem;
+      }.k{ margin-bottom: 8px; }.heading{ text-align: center; line-height:
+      2rem;margin-bottom: 2rem;text-transform: uppercase;} .page{ height: 100vh;
+      min-height: 100vh; }td{ font-size: 85%; }th{ font-size: 90%; }p{font-size:
+      92%;}
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    />
+
+  </head>
+
+  <body>
+    <div className="page">
+      <h4 className="heading">HASIL PENILAIAN UJI UNIT KOMPETENSI
+        <br />PEROGRAM KEAHLIAN
+        {{jurusan.nama}}</h4>
+      <div className="info"><p>Nama</p><span>:</span>{{nama}}</div>
+      <div className="info"><p>NISN</p><span>:</span>{{nisn}}</div>
+      <p className="k">Klaster
+        {{penilaians.0.klaster.klaster}}
+        {{penilaians.0.klaster.kompetensi_keahlian}}</p>
+      <table className="table">
+        <tr>
+          <th>No</th>
+          <th>Kode Unit</th>
+          <th>Unit Kompetensi</th>
+        </tr>
+        {{#each penilaians}}
+          <tr>
+            <td>{{this.no}}</td>
+            <td>{{this.element_uji.kode_unit}}</td>
+            <td>{{this.element_uji.nama}}</td>
+          </tr>
+        {{/each}}</table>
+
+    </div>
+    <div className="page">
+      <h4 className="heading">HASIL PENILAIAN UJI UNIT KOMPETENSI
+        <br />PEROGRAM KEAHLIAN
+        {{jurusan.nama}}</h4>
+      <div className="info"><p>Nama</p><span>:</span>{{nama}}</div>
+      <div className="info"><p>NISN</p><span>:</span>{{nisn}}</div>
+      <p className="k">Klaster
+        {{penilaians.0.klaster.klaster}}
+        {{penilaians.0.klaster.kompetensi_keahlian}}</p>
+      <table className="table">
+        <tr>
+          <th>No</th>
+          <th>Kode Unit</th>
+          <th>Element Uji</th>
+          <th>K</th>
+          <th>BK</th>
+          <th>Catatan</th>
+        </tr>
+        {{#each penilaians}}
+          <tr>
+            <td>{{this.no}}</td>
+            <td>{{this.element_uji.kode_unit}}</td>
+            <td>{{this.element_uji.nama}}</td>
+            <td align="center">
+              {{this.statusK}}
+            </td>
+            <td align="center">
+              {{this.statusBK}}
+            </td>
+            <td align="center">
+              {{this.catatan}}
+            </td>
+
+          </tr>
+        {{/each}}</table>
+
+    </div>
+    <script>
+      // Menambahkan nomor urut pada kolom pertama tabel var tableRows =
+      document.querySelectorAll('.table tr'); for (var i = 1; i <
+      tableRows.length; i++) { var row = tableRows[i]; var cell =
+      document.createElement('td'); cell.textContent = i; row.insertBefore(cell,
+      row.firstChild); }
+    </script>
+
+  </body>
+
+</html>

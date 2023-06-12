@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Data BDS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .table {
+      width: 100%;
+      border-collapse:
+        collapse;
+    }
+
+    .table th,
+    .table td {
+      padding: 8px;
+      text-align: left;
+      border:
+        1px solid #ddd;
+    }
+
+    .table th {
+      background-color: #f2f2f2;
+    }
+
+    .table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .table tr:hover {
+      background-color: #e2e2e2;
+    }
+
+    body {
+      font-family: Arial, Helvetica,
+        sans-serif;
+    }
+
+    .info {
+      display: flex;
+      gap: 10px;
+      margin-bottom: .7rem;
+    }
+
+    .info p {
+      width: 50px;
+    }
+
+    .info:nth-child(2) {
+      margin-bottom: 1.8rem;
+    }
+
+    .k {
+      margin-bottom: 8px;
+    }
+
+    .heading {
+      text-align: center;
+      line-height:
+        2rem;
+      margin-bottom: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h4 className="heading">HASIL PENILAIAN UJI UNIT KOMPETENSI
+    <br />PEROGRAM KEAHLIAN REKAYASA PERANGKAT LUNAK
+  </h4>
+  <div className="info">
+    <p>Nama</p><span>:</span>Muhammad Abdul
+  </div>
+  <div className="info">
+    <p>NISN</p><span>:</span>09685
+  </div>
+  <p className="k">Klaster 1 Rekayasa perangkat lunak</p>
+  <table className="table">
+    <tr>
+      <th>No</th>
+      <th>Kode Unit</th>
+      <th>Unit Kompetensi</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>JK.100.2.0.3</td>
+      <td>Menggunakan Bahasa Pemrograman Yang Diminta Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. In eius error laborum consectetur
+        dolores possimus tempora inventore ullam cupiditate nulla?</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
